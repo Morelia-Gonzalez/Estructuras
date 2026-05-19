@@ -1,0 +1,17 @@
+digraph ListaImagenes {
+  rankdir=LR;
+  node [shape=record fontsize=10];
+  label="Lista Circular Doblemente Enlazada - Imagenes";
+  labelloc=t;
+
+  img_1 [label="{<prev>|img_1|<next>}" fillcolor=lightyellow style=filled];
+  img_4 [label="{<prev>|img_4|<next>}" fillcolor=lightyellow style=filled];
+  img_1:next -> img_4:prev [color=blue];
+  img_4:next -> img_1:prev [color=blue];
+  img_1:prev -> img_4:next [color=red style=dashed];
+  img_4:prev -> img_1:next [color=red style=dashed];
+  icapa_1_0 [label="capa_4" fillcolor=lightcyan style=filled];
+  img_1 -> icapa_1_0 [color=darkgreen];
+  icapa_1_1 [label="capa_6" fillcolor=lightcyan style=filled];
+  icapa_1_0 -> icapa_1_1 [color=darkgreen];
+}
